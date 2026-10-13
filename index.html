@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=4" />
   </head>
   <body>
     <div class="background-glow glow-one"></div>
@@ -28,23 +28,17 @@
         i made a mistake, and i want to make it right. Please forgive me, my baby.
       </p>
 
-      <section class="music-card" aria-label="Background music player">
-        <iframe
-          class="music-player"
-          src="https://embed.music.apple.com/us/album/last-night-on-earth/315611219?i=315611375&autoplay=1"
-          title="Play Last Night on Earth by Green Day"
-          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-          aria-hidden="true"
-          tabindex="-1"
-        ></iframe>
-      </section>
-      <p class="music-fallback">
-        If the music doesn't start, <a href="https://music.apple.com/us/album/last-night-on-earth/315611219?i=315611375" target="_blank" rel="noopener noreferrer">tap here to play it</a>.
+      <audio id="backgroundMusic" autoplay preload="auto" hidden>
+        <source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/ed/10/2fed102e-9258-299f-083b-c2484504ee30/mzaf_14450259569239720830.plus.aac.p.m4a" type="audio/mp4" />
+      </audio>
+      <p id="musicFallback" class="music-fallback" hidden>
+        <button id="musicStart" class="music-start" type="button">Tap to start our song</button>
+        <a href="https://music.apple.com/us/album/last-night-on-earth/315611219?i=315611375" target="_blank" rel="noopener noreferrer">Listen to the full song on Apple Music</a>
       </p>
 
       <a class="scroll-button" href="apology.html">Read my message</a>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>

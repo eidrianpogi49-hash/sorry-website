@@ -1,6 +1,9 @@
 const floatingHearts = document.querySelector('.floating-hearts');
 const revealButton = document.getElementById('revealButton');
 const secretMessage = document.getElementById('secretMessage');
+const backgroundMusic = document.getElementById('backgroundMusic');
+const musicFallback = document.getElementById('musicFallback');
+const musicStart = document.getElementById('musicStart');
 
 for (let i = 0; i < 18; i++) {
   const heart = document.createElement('span');
@@ -19,5 +22,19 @@ if (revealButton && secretMessage) {
     revealButton.textContent = secretMessage.classList.contains('visible')
       ? 'I love you more than words'
       : 'Open my heart to you';
+  });
+}
+
+if (backgroundMusic && musicFallback && musicStart) {
+  const showMusicFallback = () => {
+    musicFallback.hidden = false;
+  };
+
+  backgroundMusic.play().catch(showMusicFallback);
+
+  musicStart.addEventListener('click', () => {
+    backgroundMusic.play().then(() => {
+      musicFallback.hidden = true;
+    }).catch(showMusicFallback);
   });
 }
