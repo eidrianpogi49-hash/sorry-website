@@ -77,6 +77,14 @@ body {
   animation: message-pop-in 3.2s cubic-bezier(0.2, 0.75, 0.3, 1) both;
 }
 
+.message-page-view.entering {
+  animation: message-pop-in 3.2s cubic-bezier(0.2, 0.75, 0.3, 1) both;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 @keyframes message-pop-in {
   from {
     opacity: 0;
@@ -150,6 +158,10 @@ h2 {
   margin: 14px auto 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.music-fallback[hidden] {
+  display: none;
 }
 
 .music-fallback a {
@@ -271,6 +283,10 @@ button:hover,
 
 @media (prefers-reduced-motion: reduce) {
   .message-page .card {
+    animation: message-fade-in 2s ease-out both;
+  }
+
+  .message-page-view.entering {
     animation: message-fade-in 2s ease-out both;
   }
 }
