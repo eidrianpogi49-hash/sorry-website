@@ -25,12 +25,16 @@
       <section class="music-card" aria-label="Background music player">
         <iframe
           class="music-player"
-          src="https://embed.music.apple.com/us/album/last-night-on-earth/315611219?i=315611375"
+          src="https://embed.music.apple.com/us/album/last-night-on-earth/315611219?i=315611375&autoplay=1"
           title="Play Last Night on Earth by Green Day"
           allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-          loading="lazy"
+          aria-hidden="true"
+          tabindex="-1"
         ></iframe>
       </section>
+      <p class="music-fallback">
+        If the music doesn't start, <a href="https://music.apple.com/us/album/last-night-on-earth/315611219?i=315611375" target="_blank" rel="noopener noreferrer">tap here to play it</a>.
+      </p>
 
       <section class="message">
         <h2>I want you to know that</h2>
